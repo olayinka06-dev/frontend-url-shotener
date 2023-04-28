@@ -1,6 +1,5 @@
 import React from 'react';
 import './Hero.jsx';
-// import { useState, useEffect } from 'reac
 
 import Logo from "./images/logo.svg";
 import styled from 'styled-components';
