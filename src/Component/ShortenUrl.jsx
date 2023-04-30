@@ -1,42 +1,61 @@
-import React from 'react'
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const ShortenUrl = (props) => {
+const ShortenUrl = () => {
+    const [originalUrl, setOriginalUrl] = useState("");
+    const [shortLink, setShortLink] = useState([]);
+    const [error, setError] = useState();
+    useEffect(()=> {
+        if(originalUrl){
+            const base_url = `https://api.shrtco.de/v2/shorten?url=${originalUrl}`;
+
+            axios.get(base_url)
+            .then((response)=> {
+                setShortLink(response.data.result.short_link)
+            })
+            .catch(error => {
+                setError("Please check your url and try again")
+                console.error(error)
+            })
+        }
+    }, [originalUrl])
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (!originalUrl) {
+            setError("Please type in a link")
+        } else {
+            
+        }
+        
+
+    }
   return (
-    <Wrapper>
-        <div className="container">
-            <div className='one'>
-                <h3>{props.input}</h3>
+    <div>
+        <form action="" onSubmit={handleSubmit}>
+            <div>
+                <input 
+                type="text"
+                value={originalUrl}
+                onChange={(event)=> setOriginalUrl(event.target.value)}
+                
+                />
+                {error && (
+                    <p>{error}</p>
+                )}
             </div>
-            <div className='two'>
-                <h3>{props.short_link}</h3>
-                <button>{props.btn}</button>
-            </div>
-        </div>
-    </Wrapper>
+            <button type="submit">submit</button>
+        </form>
+        {
+            shortLink && (
+                <div>
+                    <p>{originalUrl}</p>
+                    <p>{shortLink}</p>
+                </div>
+            ) 
+        } 
+    </div>
   )
 }
 
-const Wrapper = styled.div`
-
-.container{
-    width: 100%;
-    height: 10vh;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.one{
-    width: 100%;
-}
-.two{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-`
-
-export default ShortenUrl;
+export default ShortenUrl

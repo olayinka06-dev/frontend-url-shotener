@@ -13,20 +13,20 @@ const Shorten = () => {
         setError("Please add a Link");
         return;
       }
-      try {
-        const response = await axios.get(
-          `https://api.shrtco.de/v2/shorten?url=${originalUrl}`
-        );
-        setShortUrls((prevShortUrls) => [
-          ...prevShortUrls,
-          { originalUrl, shortUrl: response.data.result.short_link }
-        ]);
-        setOriginalUrl("");
-        setError(null);
-      } catch (error) {
-        setError("Unable to shorten URL. Please check the URL and try again.");
-        console.error(error);
-      }
+        try {
+            const response = await axios.get(
+              `https://api.shrtco.de/v2/shorten?url=${originalUrl}`
+            );
+            setShortUrls((prevShortUrls) => [
+              ...prevShortUrls,
+              { originalUrl, shortUrl: response.data.result.short_link }
+            ]);
+            setOriginalUrl("");
+            setError(null);
+          } catch (error) {
+            setError("Unable to shorten URL. Please check the URL and try again.");
+            console.error(error);
+          }
     };
   
     const handleCopy = (shortUrl) => {
