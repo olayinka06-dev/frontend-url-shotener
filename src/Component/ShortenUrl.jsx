@@ -24,11 +24,7 @@ const ShortenUrl = () => {
         event.preventDefault();
         if (!originalUrl) {
             setError("Please type in a link")
-        } else {
-            
         }
-        
-
     }
   return (
     <div>
