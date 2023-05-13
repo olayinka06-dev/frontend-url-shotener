@@ -1,6 +1,7 @@
 import Hero from './Hero';
 import Nav from './Nav';
 import Shorten from './Shorten';
+import Statistics from './Statistics';
 
 const Home = () => {
 
@@ -9,6 +10,7 @@ const Home = () => {
             < Nav/>
             <Hero/>
             <Shorten/>
+            <Statistics/>
         </div>
     )
 }
