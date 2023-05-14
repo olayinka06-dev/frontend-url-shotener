@@ -44,35 +44,35 @@ const Nav = () => {
               <div className="third-line"></div>
             </button> 
         </nav> 
-        <ul className='nav-mobile'>
-          <div className="group">
-            <li className='nav-link'><Link to={"/features"}>Features</Link></li>
-            <li className='nav-link'><Link to={"/pricing"}>Pricing</Link></li>
-            <li className='nav-link'><Link to={"/resources"}>Resources</Link></li>
-          </div>
-          <Link to={'/login'}><li className='nav-link login'>Login</li></Link>
-          <Link to={'/signup'}><li className='nav-link signup'>Sign Up</li></Link>
-        </ul>
+        <div className="align">
+          <ul className='nav-mobile'>
+            <div className="group">
+              <li className='nav-link'><Link to={"/features"}>Features</Link></li>
+              <li className='nav-link'><Link to={"/pricing"}>Pricing</Link></li>
+              <li className='nav-link'><Link to={"/resources"}>Resources</Link></li>
+            </div>
+            <Link to={'/login'}><li className='nav-link login'>Login</li></Link>
+            <Link to={'/signup'}><li className='nav-link signup'>Sign Up</li></Link>
+          </ul>
+        </div>
 
         </Wrapper>
     )
 }
 const Wrapper = styled.section`
-  /*  */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
   nav{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    height: 10vh;
+    height: 15vh;
     align-items: center;
+    transition: all 1s ease;
   }
   .nav-desktop1{
     list-style: none;
@@ -95,8 +95,12 @@ const Wrapper = styled.section`
   .signup{
     color: white;
     background-color: hsl(180, 66%, 49%);
-    padding: 8px 20px;
+    padding: 12px 30px;
     border-radius: 20px;
+    transition: all 1s ease;
+  }
+  .signup:hover{
+    background-color: rgb(155,227,226);
   }
   .toggle{
     border: none;
@@ -148,27 +152,36 @@ const Wrapper = styled.section`
     [class*="desktop"]{
       display: none;
     }
+    .nav-link{
+      margin: 0;
+    }
     .nav-link a{
       color: white;
     }
     .login{
       color: white;
     }
+    .align{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .nav-mobile{
-      position: fixed;
+      position: absolute;
       top: 15%;
-      left: 10%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: hsl(255, 11%, 22%);
-      min-width: 80%;
+      width: 80%;
       height: 50vh;
       border-radius: 15px;
       gap: 20px;
       padding: 0 30px;
-      transform: translate(-700px);
+      transform: translate(-900px);
       overflow: hidden;
       transition: all 1s ease;
       z-index: 1000;

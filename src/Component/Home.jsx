@@ -1,3 +1,5 @@
+import Boost from './Boost';
+import Footer from './Footer';
 import Hero from './Hero';
 import Nav from './Nav';
 import Shorten from './Shorten';
@@ -7,9 +9,18 @@ const Home = () => {
 
     return(
         <div>
-            < Nav/>
-            <Hero/>
-            <Statistics/>
+           <header>
+                < Nav/>
+           </header>
+            <main>
+                <Hero/>
+                <Statistics/>
+                <Boost/>
+                <Footer/>
+            </main>
+            <footer>
+               
+            </footer>
         </div>
     )
 }

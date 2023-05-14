@@ -44,7 +44,7 @@ const Shorten = () => {
     };
   
     const handleCopy = (shortUrl) => {
-        setcopy(true)
+        setcopy(!copy)
       navigator.clipboard.writeText(shortUrl);
     };
 
@@ -97,15 +97,18 @@ const TodoList = styled.div`
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 110px;
     .index{
-        width: 80%;
+        width: 85%;
         background-color: white;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-radius: 10px;
         padding: 10px 15px;
+    }
+    .align p{
+        color: rgb(43,209,209);
     }
     .align{
         display: flex;
@@ -114,10 +117,13 @@ const TodoList = styled.div`
         align-items: center;
     }
     button{
-        padding: 10px 28px;
+        padding: 12px 35px;
         background-color: rgb(43,209,209);
         color: white;
         border-radius: 10px;
+        border: none;
+        transition: all 1s ease;
+        cursor: pointer;
     }
     button:hover{
         background-color: rgb(152,227,228);
@@ -141,6 +147,7 @@ const Form = styled.form`
 
     @media screen and (max-width: 950px) {
         flex-direction: column;
+        /* padding: 0 30px; */
     }
 
 `;
@@ -155,7 +162,11 @@ const Button = styled.button`
 `;
 const Wrapper = styled.div`
     
-
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
 `
 const Shortener = styled.section`
@@ -201,10 +212,12 @@ const Shortener = styled.section`
     @media screen and (max-width: 950px) {
         .top-shortener{
             flex-direction: column;
-            padding: 0 20px;
+            padding: 0 30px;
+            top: 110%;
         }
         .btn-group{
             width: 100%;
+            padding: 0;
         }
         
     }
