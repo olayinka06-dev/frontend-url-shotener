@@ -2,6 +2,7 @@ import React, { useState, useRef} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import bgshorten from './images/bg-shorten-desktop.svg';
+
 const Shorten = () => {
     const [originalUrl, setOriginalUrl] = useState("");
     const [shortUrls, setShortUrls] = useState([]);
@@ -87,9 +88,6 @@ const TodoList = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 100px;
-    /* margin-top: 80px; */
 `
 const Error =styled.div`
     color: red;
@@ -134,6 +132,7 @@ const Shortener = styled.section`
     align-items: center;
     justify-content: center;
 
+
     .top-shortener{
         width: 80%;
         min-height: 25vh;
@@ -152,9 +151,6 @@ const Shortener = styled.section`
         padding: 0 50px;
         gap: 20px;
     }
-    body{
-        position: relative;
-    }
 
     .error{
         width: 100%;
@@ -167,12 +163,6 @@ const Shortener = styled.section`
     .btn-group{
         width: 20%;
     }
-
-
-
-
-
-
 
     @media screen and (max-width: 950px) {
         .top-shortener{
