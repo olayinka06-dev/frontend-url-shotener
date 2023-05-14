@@ -46,7 +46,6 @@ const Statistics = () => {
 const Wrapper = styled.div`
     section{
         width: 100%;
-        /* min-height: 100vh; */
         background-color: RGB(239 241 247);
     }
 

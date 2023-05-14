@@ -8,6 +8,7 @@ const Shorten = () => {
     const [shortUrls, setShortUrls] = useState([]);
     const [error, setError] = useState(null);
     const inputRef = useRef();
+    const [copy, setcopy] = useState(false);
   
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -43,6 +44,7 @@ const Shorten = () => {
     };
   
     const handleCopy = (shortUrl) => {
+        setcopy(true)
       navigator.clipboard.writeText(shortUrl);
     };
 
@@ -69,10 +71,16 @@ const Shorten = () => {
                 </Shortener>
                 <TodoList className='todo-list'>
                     {shortUrls.map(({ originalUrl, shortUrl }, index) => (
-                        <div key={index}>
+                        <div key={index} className='index'>
                             <p>{originalUrl}</p>
-                            <p>{shortUrl}</p>
-                            <button onClick={() => handleCopy(shortUrl)}>Copy</button>
+                            <div className='align'>
+                                <p>{shortUrl}</p>
+                                <div className='copy'>
+                                    {
+                                        copy ? <button style={{backgroundColor: "rgb(58,48,83)"}} onClick={() => handleCopy(shortUrl)}>Copied!</button> : <button onClick={() => handleCopy(shortUrl)}>Copy</button>
+                                    }
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </TodoList>
@@ -86,8 +94,34 @@ const TodoList = styled.div`
     min-height: 3vh;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     align-items: center;
     justify-content: center;
+    margin-top: 90px;
+    .index{
+        width: 80%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+    .align{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+    }
+    button{
+        padding: 10px 28px;
+        background-color: rgb(43,209,209);
+        color: white;
+        border-radius: 10px;
+    }
+    button:hover{
+        background-color: rgb(152,227,228);
+    }
 `
 const Error =styled.div`
     color: red;
