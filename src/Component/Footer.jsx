@@ -35,10 +35,10 @@ const Footer = () => {
                     </div>
                 </div>
             <div className='one'>
+                {/* <a></a>
                 <a></a>
                 <a></a>
-                <a></a>
-                <a></a>
+                <a></a> */}
             </div>
         </footer>
     </Wrapper>

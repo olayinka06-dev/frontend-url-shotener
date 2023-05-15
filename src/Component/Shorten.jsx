@@ -25,7 +25,7 @@ const Shorten = () => {
 
             setShortUrls((prevShortUrls) => [
               ...prevShortUrls,
-              { originalUrl, shortUrl: response.data.result.short_link }
+              { originalUrl, shortUrl: response.data.result.full_short_link2 }
             ]);
             setOriginalUrl("");
             setError(null);
@@ -97,9 +97,9 @@ const TodoList = styled.div`
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin-top: 110px;
+    margin-top: 120px;
     .index{
-        width: 85%;
+        width: 80%;
         background-color: white;
         display: flex;
         justify-content: space-between;

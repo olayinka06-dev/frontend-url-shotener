@@ -2,7 +2,6 @@ import Boost from './Boost';
 import Footer from './Footer';
 import Hero from './Hero';
 import Nav from './Nav';
-import Shorten from './Shorten';
 import Statistics from './Statistics';
 
 const Home = () => {

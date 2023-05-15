@@ -73,7 +73,7 @@ const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin-top: 150px;
+        margin-top: 50px;
     }
     .middle-head h1{
         font-size: 35px;
