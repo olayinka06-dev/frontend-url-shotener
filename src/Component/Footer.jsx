@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import {FaFacebookSquare, FaInstagram, FaPinterest, FaTwitter, Fainfocircle} from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -34,10 +35,10 @@ const Footer = () => {
                     </div>
                 </div>
             <div className='one'>
-                {/* <a></a>
-                <a></a>
-                <a></a>
-                <a></a> */}
+                <a href={'/'}><FaFacebookSquare/></a>
+                <a href={'/'}><FaTwitter/></a>
+                <a href={'/'}><FaPinterest/></a>
+                <a href={'/'}><FaInstagram/></a>
             </div>
         </footer>
     </Wrapper>
