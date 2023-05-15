@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {FaFacebookSquare, FaInstagram, FaPinterest, FaTwitter, Fainfocircle} from 'react-icons/fa'
+import {FaFacebookSquare, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
   return (
