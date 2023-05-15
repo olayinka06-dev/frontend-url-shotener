@@ -69,6 +69,10 @@ const Wrapper = styled.div`
     a:hover{
         color: rgb(79,173,174);
     }
+    .one a {
+        font-size: 30px;
+        margin-right: 10px;
+    }
     h1{
         color: white;
     }
