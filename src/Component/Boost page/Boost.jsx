@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import boost from './images/bg-boost-desktop.svg'
+import boost from '../images/bg-boost-desktop.svg'
 
 const Boost = () => {
   return (
