@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Shorten from './Shorten';
+import Shorten from '../Url Shortener Page/Shorten';
 import recignition from './images/icon-brand-recognition.svg';
 import records from './images/icon-detailed-records.svg';
 import custom from './images/icon-fully-customizable.svg';

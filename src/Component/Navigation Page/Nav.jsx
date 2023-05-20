@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.jsx';
+import '../hero page/Hero.jsx';
 
 import Logo from "./images/logo.svg";
 import styled from 'styled-components';

@@ -1,8 +1,8 @@
-import Boost from './Boost';
-import Footer from './Footer';
-import Hero from './Hero';
-import Nav from './Nav';
-import Statistics from './Statistics';
+import Boost from '../Boost page/Boost';
+import Footer from '../Footer page/Footer';
+import Hero from '../hero page/Hero';
+import Nav from '../Navigation Page/Nav';
+import Statistics from '../Statistic Page/Statistics';
 
 const Home = () => {
 
