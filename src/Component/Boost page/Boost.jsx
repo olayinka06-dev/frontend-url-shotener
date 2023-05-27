@@ -50,5 +50,11 @@ const Wrapper = styled.div`
     background-color: rgb(155,227,226);
   }
 
+  @media screen and (max-width: 950px) {
+    h1{
+      font-size: 28px;
+    }
+  }
+
 `
 export default Boost;

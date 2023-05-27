@@ -103,9 +103,11 @@ const Wrapper = styled.div `
     }
     .first h1{
         width: 100%;
+        font-size: 28px;
     }
     .first p{
         padding: 0;
+        font-size: 16px;
         width: 100%;
     }
     .second img{

@@ -34,7 +34,7 @@ const Nav = () => {
                 <li className='nav-link'><Link to={"/resources"}>Resources</Link></li>
             </ul>
             <ul className='nav-desktop2'>
-                <Link to={'/login'}><li className='nav-link'>Login</li></Link>
+                <Link to={'/login'}><li className='nav-link login'>Login</li></Link>
                 <Link to={'/signup'}><li className='nav-link signup'>Sign Up</li></Link>
 
             </ul>
@@ -85,7 +85,6 @@ const Wrapper = styled.section`
     display: inline-block;
     margin-right: 30px;
     position: relative;
-
   }
 .nav-link::after {
     content: "";
@@ -174,6 +173,9 @@ const Wrapper = styled.section`
   }
   .nav-mobile{
     display: none;
+  }
+  .login{
+    color: hsl(257, 7%, 63%);
   }
 
 

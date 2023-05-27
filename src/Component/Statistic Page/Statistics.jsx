@@ -85,6 +85,7 @@ const Wrapper = styled.div`
         margin-top: 20px;
         line-height:20px;
         color: rgb(161,160,166);
+        padding-bottom: 4px;
     }
     .center{
         width: 100%;
@@ -140,7 +141,16 @@ const Wrapper = styled.div`
     @media screen and (max-width: 950px) {
         section{
             margin-top: 20px !important;
-            padding-bottom: 25px;
+            padding-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+        }
+        .first{
+            min-height: 45vh;
+        }
+        .two{
+            margin-top: 50px;
         }
     }
 
