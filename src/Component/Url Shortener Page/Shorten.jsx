@@ -17,6 +17,9 @@ const Shorten = () => {
         inputRef.current.style.borderColor = "red";
         return;
       }
+      else{
+        inputRef.current.style.borderColor = "black";
+      }
         try {
 
             const shorten_Api = `https://api.shrtco.de/v2/shorten?url=${originalUrl}`;
@@ -72,9 +75,9 @@ const Shorten = () => {
                 <TodoList className='todo-list'>
                     {shortUrls.map(({ originalUrl, shortUrl }, index) => (
                         <div key={index} className='index'>
-                            <p>{originalUrl}</p>
+                            <p className='ori'>{originalUrl}</p>
                             <div className='align'>
-                                <p>{shortUrl}</p>
+                                <a href={shortUrl}>{shortUrl}</a>
                                 <div className='copy'>
                                     {
                                         copy ? <button style={{backgroundColor: "rgb(58,48,83)"}} onClick={() => handleCopy(shortUrl)}>Copied!</button> : <button onClick={() => handleCopy(shortUrl)}>Copy</button>
@@ -97,7 +100,7 @@ const TodoList = styled.div`
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 50px !important;
     .index{
         width: 80%;
         background-color: white;
@@ -107,8 +110,9 @@ const TodoList = styled.div`
         border-radius: 10px;
         padding: 10px 15px;
     }
-    .align p{
+    .align a{
         color: rgb(43,209,209);
+        text-decoration: none;
     }
     .align{
         display: flex;
@@ -129,14 +133,29 @@ const TodoList = styled.div`
         background-color: rgb(152,227,228);
     }
     @media screen and (max-width: 950px) {
+        margin-top: 0px !important;
         .index{
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
+            gap: 10px;
         }
         .align{
             width: 100%;
             flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+        .copy, button{
+            width: 100%;
+        }
+        p, a{
+            padding: 5px 0;
+        }
+        .ori{
+            width: 100%;
+            border-bottom: 1px solid lightgray;
         }
     }
 `
@@ -147,6 +166,7 @@ const Input = styled.input`
     width: 100%;
     padding: 20px !important;
     border-radius: 10px;
+    font-size: 18px;
 
 `;
 const Form = styled.form`
@@ -204,7 +224,7 @@ const Shortener = styled.section`
         align-items: center;
         justify-content: center;
         gap: 7px;
-        padding: 0 50px;
+        padding: 20px !important;
         gap: 20px;
     }
 

@@ -139,7 +139,8 @@ const Wrapper = styled.div`
 
     @media screen and (max-width: 950px) {
         section{
-            margin-top: 50px;
+            margin-top: 20px !important;
+            padding-bottom: 25px;
         }
     }
 
