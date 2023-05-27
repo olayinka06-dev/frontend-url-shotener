@@ -8,7 +8,8 @@ const Shorten = () => {
     const [shortUrls, setShortUrls] = useState([]);
     const [error, setError] = useState(null);
     const inputRef = useRef();
-    const [copy, setcopy] = useState(false);
+    // const [copy, setcopy] = useState(false);
+    const [copiedUrl, setCopiedUrl] = useState(null);
   
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -47,7 +48,7 @@ const Shorten = () => {
     };
   
     const handleCopy = (shortUrl) => {
-        setcopy(!copy)
+        setCopiedUrl(shortUrl);
       navigator.clipboard.writeText(shortUrl);
     };
 
@@ -79,9 +80,9 @@ const Shorten = () => {
                             <div className='align'>
                                 <a href={shortUrl}>{shortUrl}</a>
                                 <div className='copy'>
-                                    {
-                                        copy ? <button style={{backgroundColor: "rgb(58,48,83)"}} onClick={() => handleCopy(shortUrl)}>Copied!</button> : <button onClick={() => handleCopy(shortUrl)}>Copy</button>
-                                    }
+                                <button onClick={() => handleCopy(shortUrl)} style={{backgroundColor: copiedUrl === shortUrl ? "rgb(58,48,83)" : "rgb(43,209,209)",}}>
+                                    {copiedUrl === shortUrl ? "Copied !" : "Copy"}
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +123,7 @@ const TodoList = styled.div`
     }
     button{
         padding: 12px 35px;
-        background-color: rgb(43,209,209);
+        /* background-color: rgb(43,209,209); */
         color: white;
         border-radius: 10px;
         border: none;
@@ -151,7 +152,7 @@ const TodoList = styled.div`
             width: 100%;
         }
         p, a{
-            padding: 5px 0;
+            padding: 8px 0;
         }
         .ori{
             width: 100%;

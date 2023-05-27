@@ -96,11 +96,19 @@ const Wrapper = styled.div`
         footer{
             grid-template-columns: 1fr;
         }
-        .one, .two{
+        .two{
             text-align: center;
             width: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .one{
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
         }

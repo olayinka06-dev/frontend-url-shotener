@@ -84,14 +84,50 @@ const Wrapper = styled.section`
   .nav-link{
     display: inline-block;
     margin-right: 30px;
+    position: relative;
+
   }
+.nav-link::after {
+    content: "";
+    background-color: hsl(180, 66%, 49%);
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 110%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.nav-link:hover::after {
+    background-color: hsl(180, 66%, 49%);
+    transform: scaleX(1);
+}
+.nav-link::before {
+    content: "";
+    background-color: hsl(180, 66%, 49%);
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: -10%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.nav-link:hover::before {
+    background-color: hsl(180, 66%, 49%);
+    transform: scaleX(1);
+}
   .nav-link a{
     text-decoration: none;
     color: hsl(257, 7%, 63%);
   }
-  .nav-link a:hover{
+  /* .nav-link a:hover{
     color: hsl(260, 8%, 14%);
-  }
+  } */
   .signup{
     color: white;
     background-color: hsl(180, 66%, 49%);
