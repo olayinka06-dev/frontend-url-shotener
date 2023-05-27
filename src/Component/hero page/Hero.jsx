@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Bgdesktop from './images/illustration-working.svg'
+import Bgdesktop from '../images/illustration-working.svg'
 
 
 
@@ -33,7 +33,7 @@ const Wrapper = styled.div `
   }
 
     .container{
-      height: 100vh;
+      min-height: 100vh;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -82,8 +82,10 @@ const Wrapper = styled.div `
         overflow: hidden;
     }
     .second img{
-        height: 500px;
-        max-height: 100%;
+        /* height: 500px;
+        max-height: 100%; */
+        width: 100%;
+        height: 100%;
         transform: translateX(100px);
 
     }
@@ -105,6 +107,11 @@ const Wrapper = styled.div `
     .first p{
         padding: 0;
         width: 100%;
+    }
+    .second img{
+        transform: translateX(0px);
+        /* width: 100%;
+        height: 100vh; */
     }
 
   }

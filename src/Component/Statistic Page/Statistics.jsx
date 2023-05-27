@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Shorten from '../Url Shortener Page/Shorten';
-import recignition from './images/icon-brand-recognition.svg';
-import records from './images/icon-detailed-records.svg';
-import custom from './images/icon-fully-customizable.svg';
+import recignition from '../images/icon-brand-recognition.svg';
+import records from '../images/icon-detailed-records.svg';
+import custom from '../images/icon-fully-customizable.svg';
 
 const Statistics = () => {
   return (
@@ -74,6 +74,7 @@ const Wrapper = styled.div`
         flex-direction: column;
         text-align: center;
         margin-top: 50px;
+        padding: 0 10px;
     }
     .middle-head h1{
         font-size: 35px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../hero page/Hero.jsx';
 
-import Logo from "./images/logo.svg";
+import Logo from "../images/logo.svg";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 const Nav = () => {
@@ -177,17 +177,16 @@ const Wrapper = styled.section`
       justify-content: center;
       background-color: hsl(255, 11%, 22%);
       width: 80%;
-      height: 50vh;
+      height: 0vh;
       border-radius: 15px;
       gap: 20px;
       padding: 0 30px;
-      transform: translate(-900px);
       overflow: hidden;
       transition: all 1s ease;
       z-index: 1000;
     }
     .mobile-toggler{
-      transform: translate(0px);
+      height: 50vh;
     }
     .group{
       width: 100%;
