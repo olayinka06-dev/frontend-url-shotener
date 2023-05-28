@@ -148,6 +148,7 @@ const Wrapper = styled.div`
         }
         .first{
             min-height: 45vh;
+            line-height: normal;
         }
         .two{
             margin-top: 50px;
